@@ -12,6 +12,7 @@ module.exports = (grunt) ->
                     'index.html'
                     'slides/{,*/}*.{md,html}'
                     'js/*.js'
+                    'images/**'
                 ]
 
             index:
@@ -29,7 +30,7 @@ module.exports = (grunt) ->
             jshint:
                 files: ['js/*.js']
                 tasks: ['jshint']
-        
+
         connect:
 
             livereload:
@@ -68,6 +69,7 @@ module.exports = (grunt) ->
                         'slides/**'
                         'bower_components/**'
                         'js/**'
+                        'images/**'
                     ]
                     dest: 'dist/'
                 },{
@@ -77,7 +79,7 @@ module.exports = (grunt) ->
                     filter: 'isFile'
                 }]
 
-        
+
         buildcontrol:
 
             options:
@@ -89,7 +91,7 @@ module.exports = (grunt) ->
                 options:
                     remote: 'git@github.com:ukmadlz/cloudant-template.git'
                     branch: 'gh-pages'
-        
+
 
 
     # Load all grunt tasks.
@@ -131,13 +133,13 @@ module.exports = (grunt) ->
             'copy'
         ]
 
-    
+
     grunt.registerTask 'deploy',
         'Deploy to Github Pages', [
             'dist'
             'buildcontrol'
         ]
-    
+
 
     # Define default task.
     grunt.registerTask 'default', [
