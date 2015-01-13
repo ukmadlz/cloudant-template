@@ -1,0 +1,11 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Cloudant Template",
+    "packageVersion": "0.0.1",
+    "revealTheme": "default",
+    "useSass": false,
+    "deployToGithubPages": true,
+    "githubUsername": "ukmadlz",
+    "githubRepository": "cloudant-template"
+  }
+}
